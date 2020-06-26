@@ -24,3 +24,6 @@ The [YOLOv5](https://github.com/ultralytics/yolov5 "YOLOv5") model is used to de
     ```bash
     $ python detect.py --source 0
     ```
+
+### Output
+![](output.gif)
