@@ -945,7 +945,7 @@ def distancing(people_coords, img, dist_thres_lim=(200,250)):
 
         if dist > dist_thres_lim[0] and dist < dist_thres_lim[1]:
             color = (0, 255, 255)
-            label = "Low Risk "
+            label = "Safe"
             cv2.line(img, cntr1, cntr2, color, thickness)
             if already_red[cntr1] == 0:
                 cv2.circle(img, cntr1, radius, color, -1)
@@ -966,7 +966,7 @@ def distancing(people_coords, img, dist_thres_lim=(200,250)):
 
         elif dist < dist_thres_lim[0]:
             color = (0, 0, 255)
-            label = "High Risk"
+            label = "Risky"
             already_red[cntr1] = 1
             already_red[cntr2] = 1
             cv2.line(img, cntr1, cntr2, color, thickness)
